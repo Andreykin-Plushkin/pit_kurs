@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+
+	<div class="container">
+		
+		<h1 class="container__title">Информация о наборе данных MNIST</h1>
+
+		<div class="images">
+			<img class="architecture_image" src="static/images/model.png">
+			<img class="graph_image" src="static/images/learning_graph.png">			
+		</div>
+
+
+			<div class="container__wrapper">
+
+				<div class="dataset__info">
+					<h2>Данные для обучения</h2>
+
+					<table class="container__table">
+						<tbody>
+
+							<tr>
+								<td>Цифра</td>
+								<td>Количество изображений</td>
+							</tr>
+
+							{% for number in train_info %}
+								<tr>
+									<td>{{ number }}</td>
+									<td>{{ train_info[number] }}</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>					
+				</div>
+
+
+				<div class="dataset__info">
+					<h2>Данные для тестирования</h2>
+
+					<table class="container__table">
+						<tbody>
+
+							<tr>
+								<td>Цифра</td>
+								<td>Количество изображений</td>
+							</tr>
+
+							{% for number in test_info %}
+								<tr>
+									<td>{{ number }}</td>
+									<td>{{ test_info[number] }}</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+
+		</div>
+
+		<div class="container__wrapper">
+			<div class="learning__form">
+
+				<label class="input__data">
+					<p>Количество эпох:</p>
+					<input class="input__field" type="text" id="input-epochs">
+				</label>
+
+				<label class="input__data">
+					<p>Размер шага спуска градиента:</p>
+					<input class="input__field" type="text" id="input-batch-size">
+				</label>
+
+				<button class="input__button" id="learn-button" type="submit">Обучить</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="static/scripts/script.js"></script>
+
+</main>
+
+
+
+{% endblock %}

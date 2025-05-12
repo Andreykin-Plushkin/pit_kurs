@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+
+	<div class="container">
+		
+		<h1 class="container__title">Создание архитектуры сети в keras</h1>
+
+		<div class="container__wrapper">
+			<form class="learning__form" id="send-data" method="POST" action="/api/make">
+				<div class="input__data">
+					<p> Слой 1
+						<label>Имя слоя
+							<input type="text" name="name">
+						</label>
+						<label>Количество входных нейронов
+							<input type="text" name="input_size">
+						</label>
+						<label>Количество скрытых нейронов
+							<input type="text" name="hidden_units">
+						</label>
+						<label>Активационная фуннкция
+							<input type="text" name="activation">
+						</label>
+					</p>
+				</div>
+				<input class="input__button" type="submit" name="Обучить">
+			</form>
+		</div>
+
+	</div>
+
+</main>
+
+{% endblock %}

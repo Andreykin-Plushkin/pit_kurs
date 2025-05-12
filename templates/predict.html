@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<main>
+
+	<div class="container">
+		
+		<h1 class="container__title">Ввод цифры</h1>
+
+		<div class="container__wrapper">
+			<div class="input__data">
+				<canvas class="user__input" id="user-input"></canvas>
+			</div>
+			<div class="canvas__buttons">
+				<button class="input__button" id="clear__button">Очистить поле</button>
+				<button class="input__button" id="predict__button">Отправить в нейросеть</button>
+			</div>
+		</div>
+
+	</div>
+
+</main>
+
+<script src="static/scripts/painting_input.js"></script>
+
+{% endblock %}

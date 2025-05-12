@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+
+	<div class="container">
+		
+		<h1 class="container__title">О проекте</h1>
+
+		<div class="author__info">
+
+			<div class="author__credentials">
+
+				<table class="container__table">
+					<tbody>
+						<tr>
+							<td>Автор</td>
+							<td>Андрей Аксенов</td>
+						</tr>
+						<tr>
+							<td>Группа</td>
+							<td>БС-22</td>
+						</tr>
+						<tr>
+							<td>Тема</td>
+							<td>Нейронная сеть распознающая цифры</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+					Данный сервис позволяет обучить нейросеть на наборе данных MNIST, после чего, вы сможете протестировать её, нарисовав цифру, которую она должна отгадать.
+				</p>
+			</div>
+
+			<img class="author__logo" src="static/images/author.jpg">
+
+		</div>
+
+
+	</div>
+
+</main>
+
+{% endblock %}
